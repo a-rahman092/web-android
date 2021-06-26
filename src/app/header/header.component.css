@@ -1,0 +1,14 @@
+.nav-link:hover{
+    border-bottom: 3px solid blueviolet;
+}
+@media (min-width: 992px) {
+  .navbar-brand {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 30px;
+  }
+  .nav-link{
+    font-size:18px;
+    font-weight: 600;
+    margin:0 3px;
+  }
+}

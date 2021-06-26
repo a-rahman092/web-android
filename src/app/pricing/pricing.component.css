@@ -1,0 +1,9 @@
+.border-none{
+    border:none;
+}
+.bg-gradient{
+    background-image: linear-gradient( 181deg,  rgba(225,109,245,1) 6.9%, rgba(78,248,231,1) 112.8% );
+}
+.bg-gradient-green{
+    background: linear-gradient(to bottom, #1D976C, #93F9B9);
+}

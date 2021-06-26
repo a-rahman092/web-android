@@ -1,0 +1,7 @@
+.row{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,93,133,1) 0%, rgba(0,181,149,1) 90% );
+    
+}
+.btn-parallax{
+    font-weight: 500;
+}
