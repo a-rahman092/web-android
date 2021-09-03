@@ -1,0 +1,55 @@
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+.hr{
+    width:10%;
+    background-image: linear-gradient( 109.6deg,  rgba(238,58,136,1) 11.2%, rgba(128,162,245,1) 91.1% );
+    height:3px;
+}
+.nav-link:hover{
+    border-bottom: 3px solid blueviolet;
+}
+@media (min-width: 992px) {
+  .navbar-brand {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 30px;
+  }
+  .nav-link{
+    font-size:18px;
+    font-weight: 600;
+    margin:0 3px;
+  }
+}
+.parallax-row{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,93,133,1) 0%, rgba(0,181,149,1) 90% );
+    
+}
+.btn-parallax{
+    font-weight: 500;
+}
+.font-medium{
+    font-size:18px;
+}
+.border-none{
+    border:none;
+}
+.bg-gra{
+    background: linear-gradient( 181deg,  rgba(225,109,245,1) 6.9%, rgba(78,248,231,1) 112.8% );
+}
+.bg-gradient-green{
+    background: linear-gradient(to bottom, #1D976C, #93F9B9);
+}
+.img-hover:hover{
+    border:3px solid #008080;
+    padding:2px;
+    transform: scale(1.2);
+}
+.whatsapp-icon{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#34A5DA">
+
+    <meta name="description" content="We provide web design &amp; development services for individuals &amp; businesses at low cost.">
+    <meta name="keywords" content="webandroid, website maker, website development service in mahabubnagar, web development services, website development service in hyderabad, website development service at low cost">
+    <meta name="author" content="Mohammed Abdul Rahman">
+    <meta name="copyright" content="WebAndroid">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+
+    <link rel="icon" sizes="192x192" href="../static/logo.png">
+
+    <link rel="manifest" href="../static/manifest.json">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>WebAndroid</title>
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow px-3">
+            <a class="navbar-brand ms-lg-4" href="#"><img src="{{ url_for('static', filename='logo.png') }}"
+                    width="50" />&nbsp;&nbsp;WebAndroid</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-lg-auto me-lg-5">
+                    <a class="nav-item nav-link text-dark" href="#home">Home</a>
+                    <a class="nav-item nav-link text-dark" href="#whywebsite">Why Website?</a>
+                    <a class="nav-item nav-link text-dark" href="#pricing">Pricing</a>
+                    <a class="nav-item nav-link text-dark" href="#about">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div style="display: flex;justify-content: center;">
+        <div class="alert alert-primary alert-dismissible fade show" role="alert" style="position:absolute;z-index:999999;">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+    {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+
+    <section>
+        <div class="row parallax-row d-flex align-items-center text-white bg-info m-0" id="home">
+            <div class="col-md-6 p-5" data-aos="fade-up-right">
+                <h1>Web Development Services</h1>
+                <p>We provide web design &amp; development services for individuals &amp; businesses at low cost.</p>
+                <a class="btn btn-warning btn-parallax" href="#" data-bs-toggle="modal" data-bs-target="#Modal">REQUEST A
+                    QUOTE</a>
+            </div>
+            <div class="col-md-6" data-aos="fade-down-left">
+                <img src="{{ url_for('static', filename='parallax.png') }}" width="90%" />
+            </div>
+            <!--Modal-->
+            <div class="modal fade text-dark" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">REQUEST A QUOTE</h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form action="/" method="post">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control mb-2" id="inputname" name="name"
+                                        placeholder="Enter Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email</label>
+                                    <input type="email" class="form-control mb-2" id="inputemail" name="email"
+                                        placeholder="Enter Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Description</label>
+                                    <textarea class="form-control mb-2" id="inputtextarea" name="description"
+                                        placeholder="Enter Description" rows="3" required></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="submit" class="btn btn-success" value="Submit">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="alert alert-primary alert-dismissible fade show msg" role="alert">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    
+                
+
+    <section data-aos="fade-up">
+        <h1 class="text-center mt-5" id="whywebsite">Why Website?</h1>
+        <div class="container">
+            <div class="row m-0">
+                <div class="col-md-6 my-5 ps-md-5">
+                    <div class="d-flex align-items-center font-medium my-3"><img class="me-3 icon"
+                            src="{{ url_for('static', filename='brand.png') }}" width="50">A
+                        Website Proves Your Brand Credibility</div>
+                    <div class="d-flex align-items-center font-medium my-3"><img class="me-3 icon"
+                            src="{{ url_for('static', filename='team.png') }}" width="50">All
+                        of your competitors are already having a website</div>
+                    <div class="d-flex align-items-center font-medium my-3"><img class="me-3 icon"
+                            src="{{ url_for('static', filename='website.png') }}" width="50">Businesses with a Website
+                        are Easily Accessible</div>
+                    <div class="d-flex align-items-center font-medium my-3"><img class="me-3 icon"
+                            src="{{ url_for('static', filename='search.png') }}" width="50">You can benefit from Google
+                        Searches</div>
+                    <div class="d-flex align-items-center font-medium my-3"><img class="me-3 icon"
+                            src="{{ url_for('static', filename='offers.png') }}" width="50">You can showcase your offers
+                    </div>
+                </div>
+                <div class="col-md-6 text-center align-self-center my-5">
+                    <img class="img-rounded" src="{{ url_for('static', filename='website1.png') }}" width="90%">
+                </div>
+            </div>
+            <div class="row m-0" data-aos="fade-up">
+                <div class="col-md-6 text-center align-self-center my-5">
+                    <img class="img-rounded" src="{{ url_for('static', filename='website2.jpg') }}" width="90%">
+                </div>
+                <div class="col-md-6 my-5">
+                    <div class="d-flex align-items-center font-medium my-3"><img class="me-3 icon"
+                            src="{{ url_for('static', filename='showcase.png') }}" width="50">You can Showcase Your
+                        Products/Services the Best Way Possible</div>
+                    <div class="d-flex align-items-center font-medium my-3"><img class="me-3 icon"
+                            src="{{ url_for('static', filename='audience.png') }}" width="50">You
+                        can strategically target your customers through a website</div>
+                    <div class="d-flex align-items-center font-medium my-3"><img class="me-3 icon"
+                            src="{{ url_for('static', filename='marketing.png') }}" width="50">A website is an integral
+                        part of online marketing</div>
+                    <div class="d-flex align-items-center font-medium my-3"><img class="me-3 icon"
+                            src="{{ url_for('static', filename='brand-visible.png') }}" width="50">A
+                        website makes your brand more visible</div>
+                    <div class="d-flex align-items-center font-medium my-3"><img class="me-3 icon"
+                            src="{{ url_for('static', filename='business.png') }}" width="50">A
+                        website builds a Relationship</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section data-aos="fade-up">
+        <h1 class="text-center mb-5" id="pricing">Pricing</h1>
+        <div class="container row d-flex justify-content-center m-auto m-0">
+            <div class="col-md-3 shadow card me-md-3 my-2 p-0">
+                <div class="card-header text-center border-none bg-gra">
+                    <img src="{{ url_for('static', filename='pricing/mobile-app.png') }}" width="100">
+                    <h5>ANDROID APP</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title text-center">INR 2999/-</h3>
+                    <ul class="card-text">
+                        <li>Splash Screen</li>
+                        <li>Web View</li>
+                        <li>Free Playstore Submition</li>
+                    </ul>
+                    <hr>
+                    <div class="text-center">
+                        <a href="https://wa.me/919052337279?text=Hi,%20I%20am%20sending%20you%20this%20message%20because%20I%20am%20interested%20in%20Android%20App."
+                            class="btn btn-sm btn-primary text-center"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 shadow card mx-3 my-2 p-0">
+                <div class="card-header text-center border-none bg-gradient-green">
+                    <img src="{{ url_for('static', filename='pricing/singlepage-website.png') }}" width="100">
+                    <h5>SINGLE PAGE WEBSITE</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title text-center">INR 6999/-</h3>
+                    <ul class="card-text">
+                        <li>Dynamic Website</li>
+                        <li>Image Slider</li>
+                        <li>User friendly CMS</li>
+                        <li>Contact Form</li>
+                        <li>Enquiry Form</li>
+                        <li>Mobile Responsive</li>
+                        <li>Google Maps Integration</li>
+                        <li>Chat Bot Integration</li>
+                        <li>Social Media Integration</li>
+                    </ul>
+                    <hr>
+                    <div class="text-center">
+                        <a href="https://wa.me/919052337279?text=Hi,%20I%20am%20sending%20you%20this%20message%20because%20I%20am%20interested%20in%20Single%20Page%20Website."
+                            class="btn btn-sm btn-primary text-center"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 shadow card ms-md-3 my-2 p-0">
+                <div class="card-header text-center border-none bg-gra">
+                    <img src="{{ url_for('static', filename='pricing/standard-website.png') }}" width="100">
+                    <h5>STANDARD WEBSITE</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title text-center">INR 9999/-</h3>
+                    <ul class="card-text">
+                        <li>Dynamic Website</li>
+                        <li>Upto 6 Pages</li>
+                        <li>Image Slider</li>
+                        <li>Contact Form</li>
+                        <li>Enquiry Form</li>
+                        <li>User friendly CMS</li>
+                        <li>Mobile Responsive</li>
+                        <li>Google Maps Integration</li>
+                        <li>Chat Bot Integration</li>
+                        <li>Social Media Integration</li>
+                    </ul>
+                    <hr>
+                    <div class="text-center">
+                        <a href="https://wa.me/919052337279?text=Hi,%20I%20am%20sending%20you%20this%20message%20because%20I%20am%20interested%20in%20Standard%20Website."
+                            class="btn btn-sm btn-primary text-center"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section data-aos="fade-up">
+        <h1 class="text-center my-5" id="about">About us</h1>
+        <div class="row mb-3 m-0">
+            <div class="col-md-6 text-center m-auto">
+                <img class="rounded-circle img-hover mb-3" src="{{ url_for('static', filename='18361A0547.jpg') }}"
+                    width="130" height="130">
+                <h5>Mohammed Abdul Rahman</h5>
+                <em>Web Developer</em>
+                <p>I am a freelance web developer my specialties include web development, problem solving,
+                    Multi-tasking, Research
+                    and Creativity</p>
+                <div class="d-flex justify-content-center">
+                    <img class="rounded-circle mx-1" src="{{ url_for('static', filename='social-media/facebook.png') }}"
+                        width="30">
+                    <img class="rounded-circle mx-1"
+                        src="{{ url_for('static', filename='social-media/instagram.png') }}" width="30">
+                    <img class="rounded-circle mx-1" src="{{ url_for('static', filename='social-media/twitter.png') }}"
+                        width="30">
+                    <img class="rounded-circle mx-1" src="{{ url_for('static', filename='social-media/github.png') }}"
+                        width="30">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white add-button text-center py-5">
+        <h5 class="mb-3">Install WebAndroid App To Your Home Screen</h5>
+        <p>If you want to pin to your home screen.</p>
+        <p>Tap Add to Home Screen and then it will added to your home screen.</p>
+        <button class="btn btn-primary mb-5">Add to Home Screen</button>
+    </section>
+
+    <footer>
+        <div class="text-center text-white py-3" style="background-color: #008080;">
+            Copyright &copy; 2021 WebAndroid
+        </div>
+    </footer>
+
+    <a class="whatsapp-icon"
+        href="https://wa.me/919052337279?text=Hi,%20I%20am%20sending%20you%20this%20message%20because%20I%20am%20interested%20in%20your%20business!"><img
+            src="{{ url_for('static', filename='whatsapp.webp') }}" width="55"></a>
+
+    <script src="../static/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: 'true'
+        })
+    </script>
+
+</body>
+
+</html>
