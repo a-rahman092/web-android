@@ -47,20 +47,6 @@
     </header>
 
 
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <div style="display: flex;justify-content: center;">
-        <div class="alert alert-primary alert-dismissible fade show" role="alert" style="position:absolute;z-index:999999;">
-            {% for message in messages %}
-                {{ message }}
-            {% endfor %}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    </div>
-    {% endif %}
-    {% endwith %}
-    {% block body %}{% endblock %}
-
     <section>
         <div class="row parallax-row d-flex align-items-center text-white bg-info m-0" id="home">
             <div class="col-md-6 p-5" data-aos="fade-up-right">
@@ -83,7 +69,7 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <form action="/" method="post">
+                        <form action="https://formspree.io/f/moqpzoon" method="POST">
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="name">Name</label>
