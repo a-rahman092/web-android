@@ -19,20 +19,6 @@ mail = Mail(app)
 @app.route('/', methods =['GET', 'POST'])
 
 def index():
-    msg = ''
-    if request.method == 'POST' and 'name' in request.form and 'email' in request.form and 'description' in request.form :
-        name = request.form['name']
-        email = request.form['email']
-        description = request.form['description']
-        try:
-            mailmsg = Message('WebAndroid Form Submission', sender = 'abdulrahman209875@gmail.com', recipients = ['abdulrahman92mohd@gmail.com'])
-            mailmsg.body = "Hello, \nName: {}\nEmail: {} \nDescription: {}".format(name, email, description)
-            mail.send(mailmsg)
-            flash("Your Request Successfully Sent")
-            return redirect("/")
-        except:
-            msg = "Oops! Something went wrong."
-            return redirect("/")
     return render_template("index.html", msg=msg)
 
 @app.route('/service-worker.js')
