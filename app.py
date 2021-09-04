@@ -19,7 +19,7 @@ mail = Mail(app)
 @app.route('/', methods =['GET', 'POST'])
 
 def index():
-    return render_template("index.html", msg=msg)
+    return render_template("index.html")
 
 @app.route('/service-worker.js')
 def sw():
